@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         BlocProvider.of<AuthCubit>(context).logOut();
                       },
-                      child: const Text("Log out"),
+                      child: const Text("Click here to Log out"),
                     );
                   },
                 ),
