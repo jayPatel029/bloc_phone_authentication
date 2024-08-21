@@ -23,21 +23,20 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           home: BlocBuilder<AuthCubit, AuthState>(
-
             buildWhen: (oldState, newState) {
               return oldState is AuthInitialState;
             },
             builder: (context, state) {
               if (state is AuthLoggedInState) {
                 //Go=>HomeScreen
-                return HomePage();
+                return const HomePage();
               } else if (state is AuthLoggedOutState) {
                 // Go=>signInScreen
                 return SignInScreen();
               }
               else {
                 // if not loggedIn/LoggedOut
-                return Scaffold(
+                return const Scaffold(
                   body: Center(
                     child: Text("SplashScreen"),
                   ),

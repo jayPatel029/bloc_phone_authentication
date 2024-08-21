@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phone_auth_bloc/pages/cubits/auth_cubit/auth_state.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthCubit extends Cubit<AuthState> {
@@ -12,7 +11,6 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthLoadingState());
     } else {
       //logged out
-
       emit(AuthLoggedOutState());
     }
   }
